@@ -1,0 +1,32 @@
+# 公开文件白名单：新文件默认忽略，过程材料必须保存在仓库外。
+# 新增公开文件前遵循 AGENTS.md 的用途审查及用户授权要求。
+*
+!/.gitignore
+!/AGENTS.md
+!/README.md
+!/LICENSE
+!/GLOSSARY.md
+!/CHANGELOG.md
+
+!/prompts/
+!/prompts/配置入口.md
+
+!/config/
+!/config/AGENTS.model-routing.md
+!/config/模型选择示例.toml
+!/config/agents/
+!/config/agents/trellis-research.toml
+!/config/agents/trellis-implement.toml
+!/config/agents/trellis-check.toml
+
+!/docs/
+!/docs/安装与验收.md
+!/docs/模型与提供方.md
+!/docs/路由排查.md
+!/docs/兼容性.md
+!/docs/adr/
+!/docs/adr/0001-public-prompt-distribution.md
+!/docs/agents/
+!/docs/agents/issue-tracker.md
+!/docs/agents/triage-labels.md
+!/docs/agents/domain.md

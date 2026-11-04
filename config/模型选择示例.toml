@@ -1,0 +1,24 @@
+# 供配置提示词读取的选择示例，不是可直接加载的 Codex config.toml。
+# 先检查技能，再询问第三方配置状态及用户选择。凭据不属于本文件。
+preferred_mode = "hybrid"
+mode_without_third_party = "native"
+# hybrid 中第三方是日常委派优先项；GPT 的例外条件见路由规则模板。
+# 配置执行者把第三方常用档写入目标入口支持的 agents 默认字段。
+# 候选摘要缺失时按安装验收核实完整目录与 schema，允许时优先验证显式派发。
+# 默认路径仅在条件满足且经验证时使用，不据摘要缺失自动改用 GPT。
+
+[native]
+model = "gpt-6-luna"
+standard_effort = "medium"
+complex_effort = "low"
+
+[third_party]
+provider = "deepseek"
+base_url = "https://api.deepseek.com"
+model = "deepseek-flash"
+standard_effort = "high"
+complex_effort = "max"
+api_key_env = "DEEPSEEK_API_KEY"
+
+# provider、base_url、model、档位和 api_key_env 可由目标用户确认修改。
+# 其它提供方是否支持 Responses、工具调用和跨提供方子代理须单独核实。
